@@ -13,6 +13,6 @@ export const About = () => {
             title={"About"}
         >
         </PageHeader>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aut recusandae velit! Consequatur corporis, eum fuga, harum incidunt laboriosam minus necessitatibus neque non nostrum pariatur tempore. Dignissimos impedit rem tempora!
+        ini about page!!!!
     </div>
 };

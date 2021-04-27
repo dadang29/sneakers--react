@@ -44,17 +44,18 @@ export const DesktopLayout = () => {
                     style={{
                         margin: 0,
                         padding: 0,
-                        fontSize: 20,
+                        fontSize: 30,
                         marginLeft: 5,
                         fontWeight: 600,
-                        color: "#413d3e",
+                        color: "Blue",
                     }}
                 >
-                    Boilerplate
+                    SNEAKERS
                 </Paragraph>
             </div>
-            <MenuList closeLeftDrawer={() => {
-            }}/>
+            <MenuList 
+                    closeLeftDrawer={() => {}}
+                />
         </Sider>
 
 
@@ -74,6 +75,7 @@ export const DesktopLayout = () => {
                     justifyContent: 'flex-end'
                 }}
             >
+                
                 <Popover
                     autoAdjustOverflow={true}
                     placement="bottomRight"
@@ -127,8 +129,7 @@ export const DesktopLayout = () => {
                 </Popover>
             </Header>
             <Content style={{
-                maxWidth: 1024,
-                // marginTop: 32,
+                width: 1024,
             }}>
                 <AppRoute/>
             </Content>

@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import {Menu} from "antd";
 import {Link} from "react-router-dom";
-import {CalendarOutlined, HomeOutlined,} from "@ant-design/icons";
+import {CalendarOutlined, HomeOutlined, UserOutlined} from "@ant-design/icons";
 import {observer} from "mobx-react-lite";
 import {useStore} from "../../utils/useStore";
 
@@ -43,6 +43,12 @@ export const MenuList = observer((props) => {
 				<Link to={'/app/about'}>
 					<CalendarOutlined/>
 					<span>About</span>
+				</Link>
+			</Menu.Item>
+			<Menu.Item key="user">
+				<Link to={'/app/user'}>
+					<UserOutlined/>
+					<span>User</span>
 				</Link>
 			</Menu.Item>
 			<Menu.Divider style={{background: "transparent", paddingTop: 15}}/>

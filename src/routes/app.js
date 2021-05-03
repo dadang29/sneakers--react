@@ -5,6 +5,7 @@ import {Login} from "../pages/Login/Login";
 import {App} from "../pages/App/App";
 import {Home} from "../pages/Home/Home";
 import {About} from "../pages/About/About";
+import {User} from "../pages/User/User";
 
 export const AppRoute = () => {
     return <Switch>
@@ -13,6 +14,9 @@ export const AppRoute = () => {
         </Route>
         <Route path={"/app/about"}>
             <About/>
+        </Route>
+        <Route path={"/app/user"}>
+            <User/>
         </Route>
         <Route path="/app" exact>
             <Redirect to={'/app/home'} />

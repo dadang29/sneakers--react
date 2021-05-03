@@ -6,7 +6,7 @@ import img5 from "../Home/NIZZA HI ALIFE SHOES.jpg";
 
 
 export const Barang = () => {
-    const Barang = [
+    const barang = [
         {
             key : 1,
             img : img1,
@@ -39,5 +39,9 @@ export const Barang = () => {
         },
     ];
 
-    return 
+    return (
+        <div className="container">
+            
+        </div>
+    )
 }

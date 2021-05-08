@@ -1,23 +1,10 @@
 import React from "react";
-import {PageHeader} from "antd";
+import {PageHeader, Card} from "antd";
 import img from "./Tes.jpg";
-import img2 from "./90S VALASION SHOES.jpg";
-import img3 from "./COURTJAM BOUNCE SHOES.jpg";
-import img4 from "./GAMECOURT TENNIS SHOES.jpg";
-import img5 from "./NIZZA HI ALIFE SHOES.jpg";
+import { Barang } from "../Barang/Barang";
 
 export const Home = () => {
     return <div>
-        <PageHeader
-            style={{
-                padding: 0,
-                margin: 0,
-                height: 20,
-                backgroundColor: "transparent",
-            }}
-            // title={"Home"}
-        >
-        </PageHeader>
         <section class="section-intro padding-y-sm">
             <div class="container">
                 <div class="intro-banner-wrap">
@@ -32,57 +19,21 @@ export const Home = () => {
                 </div>
             </div> 
         </section>
-        <section class="section-content padding-bottom-sm">
-            <div class="container">
-                <header class="section-heading">
-                    <div class="row mb-4">
-                        <div class="col-md-10">
-                            <h4 class="section-title">Our Products</h4>
+        <section className="section-content padding-bottom-sm">
+            <div className="container">
+                <header className="section-heading">
+                    <div className="row mb-2">
+                        <div className="col-md-10">
+                            <h4 className="section-title">Our Products</h4>
                         </div>
-                        <div class="col-md-2">
-                            <a href="" class="btn btn-outline-primary float-right" style={{ float : "right" }}>See all</a>
+                        <div className="col-md-2">
+                            <a href={"/app/barang"} className="btn btn-outline-primary float-right" style={{ float : "right" }}>See all</a>
                         </div>
                     </div>
                 </header>
 
-                <div class="row" style={{ paddingBottom : 30}}>
-                    <div class="col-md-4">
-                        <div href="#" class="card card-product-grid">
-                            <a href="#" class="img-wrap"> <img src={img2} style={{ height: 270, width: 302, borderRadius: 4 }}></img> </a>
-                            <figcaption class="info-wrap">
-                            <a href="#" class="title">90S VALASION SHOES</a>
-                            <div class="price mt-1">Rp. 500.000</div>
-                            </figcaption>
-                        </div>
-                    </div>
-                    {/* <div class="col-md-3">
-                        <div href="#" class="card card-product-grid">
-                            <a href="#" class="img-wrap"> <img src={img3} style={{ height: 200, width: 230 }}></img> </a>
-                            <figcaption class="info-wrap">
-                            <a href="#" class="title">COURTJAM BOUNCE SHOES</a>
-                            <div class="price mt-1">Rp. 700.000</div>
-                            </figcaption>
-                        </div>
-                    </div> */}
-                    <div class="col-md-4">
-                        <div href="#" class="card card-product-grid">
-                            <a href="#" class="img-wrap"> <img src={img4} style={{ height: 270, width: 302, borderRadius: 4 }}></img> </a>
-                            <figcaption class="info-wrap">
-                            <a href="#" class="title">GAMECOURT TENNIS SHOES</a>
-                            <div class="price mt-1">Rp. 400.000</div> 
-                            </figcaption>
-                        </div>
-                    </div> 
-                    <div class="col-md-4">
-                        <div href="#" class="card card-product-grid">
-                            <a href="#" class="img-wrap"> <img src={img5} style={{ height: 270, width: 302, borderRadius: 4 }}></img></a>
-                            <figcaption class="info-wrap">
-                            <a href="#" class="title">NIZZA HI ALIFE SHOES</a>
-                            <div class="price mt-1">Rp. 900.000</div> 
-                            </figcaption>
-                        </div>
-                    </div> 
-                </div>
+                <Barang numberOfItems={4} />
+
             </div>
         </section>
     </div>

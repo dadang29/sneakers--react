@@ -1,8 +1,8 @@
 import React, {useState} from "react";
-import {Button, Layout, Menu, PageHeader, Popover, Typography, Input} from "antd";
+import {Button, Layout, Menu, PageHeader, Popover, Typography, Input, Badge} from "antd";
 import {MenuList} from "./MenuList";
 import {Link} from "react-router-dom";
-import {UserOutlined} from "@ant-design/icons";
+import {UserOutlined, ShoppingCartOutlined} from "@ant-design/icons";
 import {AppRoute} from "../../routes/app";
 
 const {Text, Paragraph} = Typography;
@@ -36,6 +36,7 @@ export const DesktopLayout = () => {
                 position: "fixed",
                 top: 0,
                 zIndex: 10,
+                backgroundColor: "#2e9dfe"
             }}
         >
             <div style={{
@@ -47,9 +48,9 @@ export const DesktopLayout = () => {
                         margin: 0,
                         padding: 0,
                         fontSize: 30,
-                        marginLeft: 5,
+                        // marginLeft: 5,
                         fontWeight: 600,
-                        color: "Blue",
+                        color: "white",
                     }}
                 >
                     SNEAKERS
@@ -68,20 +69,22 @@ export const DesktopLayout = () => {
             <Header
                 theme={"light"}
                 style={{
-                    height: 50,
+                    height: 70,
                     paddingLeft: 0,
                     paddingRight: 0,
-                    backgroundColor: "transparent",
-                    maxWidth: 1024,
+                    backgroundColor: "white",
+                    width: "1000px",
                     display: 'flex',
                     alignItems: 'center',
-                    justifyContent: 'flex-end'
+                    justifyContent: 'flex-end',
+                    position: "fixed",
+                    zIndex: 10,
                 }}
             >
                     <Search
                         style={{
-                            marginTop : 30,
-                            marginRight : 460,
+                            marginTop : 20,
+                            marginRight : 380,
                             maxWidth : 500,
                             paddingLeft: 0,
                         }}
@@ -91,6 +94,28 @@ export const DesktopLayout = () => {
                         // size="small"
                         onSearch={onSearch}
                     />
+
+                    <Badge 
+                        count={0} 
+                        showZero
+                        style={{
+                            fontSize: "12px",
+                            marginRight: 30,
+                            marginTop: 20
+                        }}
+                    >
+                        <Link to="/app/keranjang">
+                            <ShoppingCartOutlined 
+                                style={{
+                                    fontSize: "30px",
+                                    marginRight: 30,
+                                    marginTop: 20,
+                                    color: "black"
+                                }}
+                            />
+                        </Link>
+                    </Badge>
+
                     <Popover
                         autoAdjustOverflow={true}
                         placement="bottomRight"
@@ -100,13 +125,13 @@ export const DesktopLayout = () => {
                                 inlineIndent={0}
                                 theme="light"
                                 style={{
-                                    backgroundColor: "transparent",
+                                    backgroundColor: "white",
                                     borderRightWidth: 0,
                                 }}
                                 mode="inline"
                             >
                                 <Menu.Item>
-                                    <Link to="/app/profile">
+                                    <Link to="/app/profil">
                                         <span>Profile</span>
                                     </Link>
                                 </Menu.Item>
@@ -136,9 +161,9 @@ export const DesktopLayout = () => {
                     >
                         <Button
                             size={"default"}
-                            style={{}}
+                            style={{ marginTop : 20 }}
                             icon={
-                                <UserOutlined style={{fontSize: "13px"}}/>
+                                <UserOutlined style={{fontSize: "17px"}}/>
                             }
                         />
                     </Popover>
@@ -146,6 +171,8 @@ export const DesktopLayout = () => {
             <Content style={{
                 width: 1024,
                 padding: 20,
+                marginTop: "60px",
+                backgroundColor: "white"
             }}>
                 <AppRoute/>
             </Content>

@@ -39,18 +39,18 @@ export const MenuList = observer((props) => {
 					<span>Home</span>
 				</Link>
 			</Menu.Item>
-			<Menu.Item key="about">
-				<Link to={'/app/about'}>
+			<Menu.Item key="barang">
+				<Link to={'/app/barang'}>
 					<CalendarOutlined/>
-					<span>About</span>
+					<span>Items</span>
 				</Link>
 			</Menu.Item>
-			<Menu.Item key="user">
+			{/* <Menu.Item key="user">
 				<Link to={'/app/user'}>
 					<UserOutlined/>
 					<span>User</span>
 				</Link>
-			</Menu.Item>
+			</Menu.Item> */}
 			<Menu.Divider style={{background: "transparent", paddingTop: 15}}/>
 		</Menu>
 	);

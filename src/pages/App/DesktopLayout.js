@@ -104,7 +104,7 @@ export const DesktopLayout = () => {
                             marginTop: 20
                         }}
                     >
-                        <Link to="/app/keranjang">
+                        <Link to="/app/Checkout">
                             <ShoppingCartOutlined 
                                 style={{
                                     fontSize: "30px",

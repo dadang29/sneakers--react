@@ -45,12 +45,12 @@ export const MenuList = observer((props) => {
 					<span>Items</span>
 				</Link>
 			</Menu.Item>
-			<Menu.Item key="user">
+			{/* <Menu.Item key="user">
 				<Link to={'/app/user'}>
 					<UserOutlined/>
 					<span>User</span>
 				</Link>
-			</Menu.Item>
+			</Menu.Item> */}
 			<Menu.Divider style={{background: "transparent", paddingTop: 15}}/>
 		</Menu>
 	);

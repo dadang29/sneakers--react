@@ -5,9 +5,12 @@ import {UserOutlined, EditOutlined} from "@ant-design/icons";
 
 export const Profil = () => {
     const {Title, Text} = Typography;
+    const onFinish = (values) => {
+        console.log(values);
+    };
     const [componentSize, setComponentSize] = useState('default');
     return( <div>
-                <div className="container" style={{ marginTop: 20}}>
+                <div className="container" style={{ marginTop: 20 }}>
                     <Link to={"/app/home"} className="btn btn-warning" style={{ marginBottom: 5}}> Kembali</Link>
                     <Card>
                         <Row>
@@ -70,7 +73,7 @@ export const Profil = () => {
                         </Row>
                     </Card>
 
-                    <Card style={{ marginTop: "5px" }}>
+                    <Card style={{ marginTop: "20px" }}>
                         <Row>
                             <Col span={24}>
                                 <Title level={3} strong><EditOutlined /> Edit Profile</Title>
@@ -83,26 +86,27 @@ export const Profil = () => {
                             wrapperCol={{ span: 14 }}
                             layout="horizontal"
                             initialValues={{ size: componentSize }}
+                            onFinish={onFinish}
                         > 
 
-                            <Form.Item label="Nama Lengkap">
+                            <Form.Item label="Nama Lengkap" name="nama">
                                 <Input />
                             </Form.Item>
-                            <Form.Item label="Nomor Telepon">
+                            <Form.Item label="Nomor Telepon" name="telp">
                                 <Input />
                             </Form.Item>
-                            <Form.Item label="Alamat">
+                            <Form.Item label="Alamat" name="alamat">
                                 <Input />
                             </Form.Item>
-                            <Form.Item label="Email">
+                            <Form.Item label="Email" name="email">
                                 <Input />
                             </Form.Item>
-                            <Form.Item label="Password">
+                            <Form.Item label="Password" name="password">
                                 <Input />
                             </Form.Item>
 
                             <Form.Item style={{ marginLeft: "150px" }}>
-                                <Button type="success">Simpan</Button>
+                                <Button type="primary" htmlType="submit">Simpan</Button>
                             </Form.Item>
                         </Form>
                     </Card>

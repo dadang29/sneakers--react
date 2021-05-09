@@ -7,6 +7,8 @@ import {Home} from "../pages/Home/Home";
 import {Barang} from "../pages/Barang/Barang";
 import {Profil} from "../pages/User/Profile";
 import {DetailBarang} from "../pages/Barang/Barang_detail";
+import {Keranjang} from "../pages/Cart/Keranjang";
+import {Checkout} from "../pages/Cart/Checkout";
 import {User} from "../pages/User/User";
 
 export const AppRoute = () => {
@@ -25,6 +27,12 @@ export const AppRoute = () => {
         </Route>
         <Route path={"/app/profil"}>
             <Profil/>
+        </Route>
+        <Route path={"/app/cart"}>
+            <Keranjang/>
+        </Route>
+        <Route path={"/app/checkout"}>
+            <Checkout/>
         </Route>
         <Route path="/app" exact>
             <Redirect to={'/app/home'} />

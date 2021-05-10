@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Table, Radio, Divider } from 'antd';
+import { Table, Radio, Divider, Typography } from 'antd';
 import img1 from "../Image/90S VALASION SHOES.jpg";
 
 const data = [
@@ -42,6 +42,7 @@ const rowSelection = {
 };
 
 export const Checkout = () => {
+    const {Text} = Typography;
     const [selectionType, setSelectionType] = useState('checkbox');
     return(
         <div style={{ marginTop: 30 }}>
@@ -52,6 +53,26 @@ export const Checkout = () => {
                 }}
                 columns={columns}
                 dataSource={data}
+                size="middle"
+
+                // summary={pageData => {
+                //     let total = 0;
+
+                //     pageData.forEach(({ price }) => {
+                //         total += price;
+                //     });
+
+                //     return(
+                //         <>
+                //             <Table.Summary.Row>
+                //                 <Table.Summary.Cell colspan={4}>Total</Table.Summary.Cell>
+                //                 <Table.Summary.Cell>
+                //                     <Text strong>{total}</Text>
+                //                 </Table.Summary.Cell>
+                //             </Table.Summary.Row>
+                //         </>
+                //     );
+                // }}
             />
         </div>
     );

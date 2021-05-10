@@ -39,7 +39,7 @@ export const Keranjang = () => {
                                 >
                                     <Form.Item name="qty"> 
                                         <InputNumber />
-                                        <Button type="success" htmlType="submit" style={{ marginLeft:"10px" }}><ShoppingCartOutlined style={{ fontSize: "20px" }}/> Masukkan Keranjang</Button>
+                                        <Button type="btn-warning" htmlType="submit" style={{ marginLeft:"10px" }}><ShoppingCartOutlined style={{ fontSize: "20px" }}/> Masukkan Keranjang</Button>
                                     </Form.Item>
                                 </Form>
                             </Col>
